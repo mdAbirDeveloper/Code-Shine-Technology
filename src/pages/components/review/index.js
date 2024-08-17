@@ -11,7 +11,7 @@ const Review = () => {
           <div className="carousel carousel-center bg-green-400 rounded-box w-full space-x-4 p-4">
             
 
-            <div className="carousel-item">
+            <div className="carousel-item w-5/6 md:w-auto">
               <div class="max-w-sm mx-auto p-6 bg-white shadow-xl shadow-green-400 rounded-lg hover:shadow-2xl hover:shadow-green-800 transition-shadow duration-300 ease-in-out">
                 <div class="flex items-center">
                   <img
@@ -90,7 +90,7 @@ const Review = () => {
               </div>
             </div>
 
-            <div className="carousel-item w-5/6 md:w-auto">
+            <div className="carousel-item">
               <div class="max-w-sm mx-auto p-6 bg-white shadow-xl shadow-green-400 rounded-lg hover:shadow-2xl hover:shadow-green-800 transition-shadow duration-300 ease-in-out">
                 <div class="flex items-center">
                   <img

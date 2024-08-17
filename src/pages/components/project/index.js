@@ -21,7 +21,7 @@ const Project = () => {
                   <img className="" src="/project_2.png"></img>
                 </div>
                 <div className="bg-green-400">
-                  <h1 className="text-center font-serif font-bold text-2xl text-white pt-2 h-20">
+                  <h1 className="text-center font-serif font-bold text-2xl text-white pt-2 md:h-20">
                     {/* Responsive website with Next.js and Tailwind CSS */}
                     <TypeAnimation
                       sequence={[
@@ -50,7 +50,7 @@ const Project = () => {
                   <img className="" src="/project_3.png"></img>
                 </div>
                 <div className="bg-green-400">
-                  <h1 className="text-center font-serif font-bold text-2xl text-white pt-2 h-20">
+                  <h1 className="text-center font-serif font-bold text-2xl text-white pt-2 md:h-20">
                     {/* Responsive website with Next.js and Tailwind CSS */}
                     <TypeAnimation
                       sequence={[
@@ -79,7 +79,7 @@ const Project = () => {
                   <img className="" src="/project_4.png"></img>
                 </div>
                 <div className="bg-green-400">
-                  <h1 className="text-center font-serif font-bold text-2xl text-white pt-2 h-20">
+                  <h1 className="text-center font-serif font-bold text-2xl text-white pt-2 md:h-20">
                     {/* Responsive website with Next.js and Tailwind CSS */}
                     <TypeAnimation
                       sequence={[
@@ -108,7 +108,7 @@ const Project = () => {
                   <img className="" src="/project_1.png"></img>
                 </div>
                 <div className="bg-green-400">
-                  <h1 className="text-center font-serif font-bold text-2xl text-white pt-2 h-20">
+                  <h1 className="text-center font-serif font-bold text-2xl text-white pt-2 md:h-20">
                     {/* Responsive website with Next.js and Tailwind CSS */}
                     <TypeAnimation
                       sequence={[
