@@ -72,7 +72,7 @@ const Login = () => {
               {...register("identifier", {
                 required: "Email or Phone is required",
               })}
-              className="w-full p-2 border border-gray-300 rounded mt-1"
+              className="w-full p-2 border border-gray-300 rounded mt-1 text-green-500"
               placeholder="Enter your email or phone number"
             />
             {errors.identifier && (
