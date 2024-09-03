@@ -1,3 +1,4 @@
+import Head from "next/head";
 import {
   FaBootstrap,
   FaCss3,
@@ -11,6 +12,16 @@ import { SiExpress, SiMongodb, SiMysql, SiTailwindcss } from "react-icons/si";
 const Services = () => {
   return (
     <div>
+      <Head>
+        <title>Our Services - Code Shine Technology</title>
+        <meta name="description" content="Discover the range of services offered by Code Shine Technology, including front-end, back-end, and full stack web development. Our expertise covers a wide array of technologies to meet your digital needs." />
+        <meta name="keywords" content="front-end development, back-end development, full stack development, web development services, Code Shine Technology" />
+        <meta property="og:title" content="Our Services - Code Shine Technology" />
+        <meta property="og:description" content="Discover the range of services offered by Code Shine Technology, including front-end, back-end, and full stack web development." />
+        <meta property="og:image" content="/profile-pic.png" />
+        <meta property="og:url" content="https://codeShineTechnology.com/components/services" />
+        <meta name="robots" content="index, follow" />
+      </Head>
       <div className="max-w-[1500px] mx-auto">
         <h1 className="text-center text-5xl font-serif font-bold uppercase text-green-500 my-10">
           our services
@@ -32,7 +43,7 @@ const Services = () => {
               <FaBootstrap className="text-3xl text-blue-400" />
               <SiTailwindcss className="text-3xl text-blue-500" />
             </div>
-            <p className="text-xl font-serif font-thin text-left mt-5">
+            <p className="text-xl font-serif font-thin text-left mt-5 text-black">
               We craft visually stunning, responsive, and interactive interfaces
               using HTML, CSS, JavaScript, React.js, Next.js.js, Bootstrap,
               Tailwind CSS and various CSS libraries. Our focus is on delivering
@@ -53,7 +64,7 @@ const Services = () => {
               <SiMongodb className="text-3xl text-green-500" />
               <SiMysql className="text-3xl text-black" />
             </div>
-            <p className="text-xl font-serif font-thin text-left">
+            <p className="text-xl font-serif font-thin text-left text-black">
               We specialize in robust and scalable back-end solutions using
               Node.js, Express, and various databases like MongoDB and SQL. Our
               services ensure your applications run smoothly, handle data
@@ -79,7 +90,7 @@ const Services = () => {
               <SiMongodb className="text-3xl text-green-500" />
               <SiMysql className="text-3xl text-black" />
             </div>
-            <p className="text-xl font-serif font-thin text-left">
+            <p className="text-xl font-serif font-thin text-left text-black">
               We offer comprehensive full stack development services, combining
               both front-end and back-end expertise. Utilizing technologies like
               React.js, Node.js, Express, and databases such as MongoDB and SQL,
