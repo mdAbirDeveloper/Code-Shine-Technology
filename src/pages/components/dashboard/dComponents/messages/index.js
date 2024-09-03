@@ -12,7 +12,7 @@ const Messages = () => {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:5000/messages"); // Update the URL according to your backend endpoint
+      const response = await fetch("https://code-shine-technology.vercel.app/messages"); // Update the URL according to your backend endpoint
 
       if (!response.ok) {
         throw new Error("Failed to fetch messages.");
@@ -45,7 +45,7 @@ const Messages = () => {
     if (!window.confirm("Are you sure you want to delete this message?")) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/messages/${id}`, {
+      const response = await fetch(`https://code-shine-technology.vercel.app/messages/${id}`, {
         method: "DELETE",
       });
 

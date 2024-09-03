@@ -28,7 +28,7 @@ const Contact = () => {
       };
       console.log(message);
       // Send data to MongoDB (modify endpoint and format if needed)
-      const response = await fetch("http://localhost:5000/message", {
+      const response = await fetch("https://code-shine-technology.vercel.app/message", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
