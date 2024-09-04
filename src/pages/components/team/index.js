@@ -74,7 +74,7 @@ const Team = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <div className="bg-gray-100">
+      <div className="">
         <div className="max-w-[1500px] mx-auto shadow-md mt-20 p-5">
           <h1 className="uppercase font-bold font-serif md:text-4xl text-3xl text-blue-500 text-center py-6">
             Our Experienced Team

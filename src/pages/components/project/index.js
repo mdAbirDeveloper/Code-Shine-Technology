@@ -21,7 +21,7 @@ const Project = () => {
 
       <div className="">
         <div className="max-w-[1500px] mx-auto min-h-screen shadow-md mt-0">
-          <h1 className="text-center md:pb-10 pb-2 md:pt-20 pt-4 md:text-5xl text-2xl text-green-800 font-serif font-bold uppercase">
+          <h1 className="text-center md:pb-10 pb-2 md:pt-20 pt-4 md:text-5xl text-2xl text-green-500 font-serif font-bold uppercase">
             Most Recent Projects
           </h1>
 
@@ -50,7 +50,7 @@ const Project = () => {
                     </h1>
                     <div className="flex justify-center w-44 mx-auto border border-green-500 shadow-sm py-1 rounded">
                       <a href="https://github.com/your-repo-link">
-                        <FaGithub className="text-4xl mr-5 bg-white rounded-full" />
+                        <FaGithub className="text-4xl mr-5 bg-white text-black rounded-full" />
                       </a>
                       <a href="https://shahjalal-web.netlify.app/">
                         <LiaLaptopCodeSolid className="text-4xl" />
@@ -82,7 +82,7 @@ const Project = () => {
                     </h1>
                     <div className="flex justify-center w-44 mx-auto border border-green-500 shadow-sm py-1 rounded">
                       <a href="https://github.com/mdAbirDeveloper/perlour">
-                        <FaGithub className="text-4xl mr-5 bg-white rounded-full" />
+                        <FaGithub className="text-4xl mr-5 bg-white text-black rounded-full" />
                       </a>
                       <a href="https://jerin-s-parlour-e93df.web.app/">
                         <LiaLaptopCodeSolid className="text-4xl" />
@@ -114,7 +114,7 @@ const Project = () => {
                     </h1>
                     <div className="flex justify-center w-44 mx-auto border border-green-500 shadow-sm py-1 rounded">
                       <a href="https://github.com/mdAbirDeveloper/doctors-portal">
-                        <FaGithub className="text-4xl mr-5 bg-white rounded-full" />
+                        <FaGithub className="text-4xl mr-5 bg-white text-black rounded-full" />
                       </a>
                       <a href="https://doctors-portal-7e5df.web.app/">
                         <LiaLaptopCodeSolid className="text-4xl" />

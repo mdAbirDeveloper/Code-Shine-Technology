@@ -36,7 +36,7 @@ const Navbar = () => {
     <div>
       <div
         style={{ maxWidth: "1500px" }}
-        className="mx-auto h-20 rounded shadow-2xl bg-slate-800"
+        className="mx-auto h-20 rounded shadow-2xl bg-slate-800 shadow-blue-500"
       >
         <div className="flex justify-between items-center pt-5">
           <div>
@@ -132,12 +132,12 @@ const Navbar = () => {
               Contact Us <FaWhatsapp className="text-xl ml-1" />
             </Button>
           </div>
-          <div className="md:hidden flex items-center mr-4">
+          <div className="md:hidden mb-3 mr-4">
             <button onClick={toggleMenu} className="text-white">
               {menuOpen ? (
-                <Close className="text-5xl" />
+                <Close className="text-4xl" />
               ) : (
-                <Menu className="text-5xl" />
+                <Menu className="text-4xl" />
               )}
             </button>
           </div>

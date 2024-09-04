@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div>
       <div className="max-w-[1500px] mx-auto mt-10">
-        <footer className="footer bg-green-700 text-white p-10">
+        <footer className="footer bg-slate-950 text-white p-10">
           <nav>
             <h6 className="font-bold font-serif text-3xl uppercase text-white">
               Services

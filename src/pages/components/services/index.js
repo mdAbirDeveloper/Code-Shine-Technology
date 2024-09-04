@@ -43,7 +43,7 @@ const Services = () => {
               <FaBootstrap className="text-3xl text-blue-400" />
               <SiTailwindcss className="text-3xl text-blue-500" />
             </div>
-            <p className="text-xl font-serif font-thin text-left mt-5 text-black">
+            <p className="text-xl font-serif font-thin text-left mt-5 text-white">
               We craft visually stunning, responsive, and interactive interfaces
               using HTML, CSS, JavaScript, React.js, Next.js.js, Bootstrap,
               Tailwind CSS and various CSS libraries. Our focus is on delivering
@@ -62,9 +62,9 @@ const Services = () => {
               <FaNodeJs className="text-3xl text-green-500" />
               <SiExpress className="text-3xl text-green-500" />
               <SiMongodb className="text-3xl text-green-500" />
-              <SiMysql className="text-3xl text-black" />
+              <SiMysql className="text-3xl text-white" />
             </div>
-            <p className="text-xl font-serif font-thin text-left text-black">
+            <p className="text-xl font-serif font-thin text-left text-white">
               We specialize in robust and scalable back-end solutions using
               Node.js, Express, and various databases like MongoDB and SQL. Our
               services ensure your applications run smoothly, handle data
@@ -88,9 +88,9 @@ const Services = () => {
               <FaNodeJs className="text-3xl text-green-500" />
               <SiExpress className="text-3xl text-green-500" />
               <SiMongodb className="text-3xl text-green-500" />
-              <SiMysql className="text-3xl text-black" />
+              <SiMysql className="text-3xl text-white" />
             </div>
-            <p className="text-xl font-serif font-thin text-left text-black">
+            <p className="text-xl font-serif font-thin text-left text-white">
               We offer comprehensive full stack development services, combining
               both front-end and back-end expertise. Utilizing technologies like
               React.js, Node.js, Express, and databases such as MongoDB and SQL,

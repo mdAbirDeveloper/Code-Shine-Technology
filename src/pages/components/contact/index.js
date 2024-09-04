@@ -61,7 +61,7 @@ const Contact = () => {
       </Head>
       <section className="max-w-[800px] mx-auto min-h-screen mt-20 px-2">
         <header className="text-center">
-          <h1 className="my-5 md:text-5xl text-3xl font-bold font-serif uppercase text-green-700 opacity-70">
+          <h1 className="my-5 md:text-5xl text-3xl font-bold font-serif uppercase text-green-500 ">
             Get in Touch with Us
           </h1>
           <div className="divider md:w-1/3 w-full mx-auto">X</div>
@@ -128,7 +128,7 @@ const Contact = () => {
             <p className="text-xl font-thin font-serif text-red-500">{error}</p>
             <button
               type="submit"
-              className="btn btn-outline bg-black text-white rounded-none"
+              className="btn btn-outline bg-slate-800 text-white rounded-none"
               disabled={loading}
             >
               {loading ? "MESSAGE SENDING...." : "SEND MESSAGE"}

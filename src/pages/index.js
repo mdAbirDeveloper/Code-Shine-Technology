@@ -21,7 +21,7 @@ export default function Home() {
         <meta property="og:url" content="https://codeShineTechnology.com" />
         <meta name="robots" content="index, follow" />
       </Head>
-      <div style={{ maxWidth: "1500px" }} className="mx-auto shadow-2xl mt-4">
+      <div style={{ maxWidth: "1500px" }} className="mx-auto shadow-xl shadow-blue-500">
       <div
       className="relative py-28 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/top-image.jpeg')" }} // Replace with your background image
