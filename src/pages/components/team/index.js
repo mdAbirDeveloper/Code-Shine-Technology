@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import Head from "next/head"; // Import Head for Next.js
 
@@ -14,7 +15,7 @@ const TeamMember = ({ name, title, bio, img }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="shadow p-5 hover:shadow-blue-500 hover:shadow-2xl">
+    <div className="shadow-lg shadow-blue-400 p-5 hover:shadow-blue-500 hover:shadow-2xl transition-transform transform hover:-translate-y-2">
       <div className="flex items-center">
         <img
           className="rounded-full w-24 md:ml-14 mr-10 hover:shadow-xl"

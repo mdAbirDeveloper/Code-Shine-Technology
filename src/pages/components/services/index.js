@@ -28,7 +28,7 @@ const Services = () => {
         </h1>
         <p></p>
         <div className="grid md:grid-cols-3 grid-cols-1 gap-10">
-          <div className="shadow-lg shadow-blue-500 hover:shadow-blue-600 hover:shadow-2xl px-4 py-10 text-center animate-slide-in-left-rotate">
+          <div className="shadow-lg shadow-blue-500 hover:shadow-blue-600 hover:shadow-2xl px-4 py-10 text-center animate-slide-in-left-rotate transition-transform transform hover:-translate-y-2">
             <h2 className="text-3xl font-serif font-bold uppercase text-blue-500">
               Front_end <br></br>{" "}
               <span className="text-3xl font-serif font-bold uppercase text-green-500">
@@ -50,7 +50,7 @@ const Services = () => {
               seamless user experiences with top-notch design and functionality.
             </p>
           </div>
-          <div className="shadow-lg shadow-blue-500 hover:shadow-blue-600 hover:shadow-2xl px-4 py-10 text-center">
+          <div className="shadow-lg shadow-blue-500 hover:shadow-blue-600 hover:shadow-2xl px-4 py-10 text-center transition-transform transform hover:-translate-y-2">
             <h2 className="text-3xl font-serif font-bold uppercase text-blue-500">
               Back end<br></br>{" "}
               <span className="text-3xl font-serif font-bold uppercase text-green-500">
@@ -71,7 +71,7 @@ const Services = () => {
               efficiently, and provide secure, reliable performance.
             </p>
           </div>
-          <div className="shadow-lg shadow-blue-500 hover:shadow-blue-600 hover:shadow-2xl px-4 py-10 text-center animate-slide-in-right-rotate">
+          <div className="shadow-lg shadow-blue-500 hover:shadow-blue-600 hover:shadow-2xl px-4 py-10 text-center animate-slide-in-right-rotate transition-transform transform hover:-translate-y-2">
             <h2 className="text-3xl font-serif font-bold uppercase text-blue-500">
               Full Stack<br></br>{" "}
               <span className="text-3xl font-serif font-bold uppercase text-green-500">

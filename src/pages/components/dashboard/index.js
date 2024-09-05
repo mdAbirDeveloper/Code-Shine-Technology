@@ -29,34 +29,32 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
+    <div className="min-h-screen bg-slate-900 shadow mt-6 rounded-xl p-6">
       <h1 className="text-3xl font-bold mb-6 text-center text-blue-600">
         Dashboard
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Card 1 */}
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h2 className="text-xl font-semibold mb-4">Statistics</h2>
-          <p className="text-gray-700">
-            Overview of recent activities and statistics.
-          </p>
-        </div>
+        <Link href={"/components/dashboard/dComponents/addProject"}>
+          <div className="bg-slate-950 shadow-blue-500 hover:shadow-blue-600 hover:shadow-2xl p-6 rounded-lg shadow-lg">
+            <h2 className="text-xl font-semibold mb-4">Add Project</h2>
+            <p className="">Overview of recent projects and control all of them.</p>
+          </div>
+        </Link>
         {/* Card 2 */}
         <Link href={"/components/dashboard/dComponents/messages"}>
-          <div className="bg-white p-6 rounded-lg shadow-lg">
+          <div className="bg-slate-950 shadow-blue-500 hover:shadow-blue-600 hover:shadow-2xl p-6 rounded-lg shadow-lg">
             <h2 className="text-xl font-semibold mb-4">Messages</h2>
-            <p className="text-gray-700">
-              Manage and review all incoming messages.
-            </p>
+            <p className="">Manage and review all incoming messages.</p>
           </div>
         </Link>
         {/* Card 3 */}
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h2 className="text-xl font-semibold mb-4">Settings</h2>
-          <p className="text-gray-700">
-            Configure application settings and preferences.
-          </p>
-        </div>
+        <Link href={"/components/dashboard/dComponents/addCustomer"}>
+          <div className="bg-slate-950 shadow-blue-500 hover:shadow-blue-600 hover:shadow-2xl p-6 rounded-lg shadow-lg">
+            <h2 className="text-xl font-semibold mb-4">Add Customer</h2>
+            <p className="">Overview of recent customer and control all of them.</p>
+          </div>
+        </Link>
       </div>
     </div>
   );

@@ -1,86 +1,218 @@
 /* eslint-disable @next/next/no-img-element */
-/* eslint-disable jsx-a11y/alt-text */
-import React from 'react';
-import Head from 'next/head';
 
-const reviews = [
-  {
-    name: 'Jhone Deo',
-    location: 'London/England',
-    img: 'review.png',
-    review: 'Siam transformed our outdated site into a modern, responsive, and mobile-friendly platform. The process was smooth, and the results speak for themselves. We’ve seen a significant increase in user engagement since the launch.'
-  },
-  {
-    name: 'Usama Mir',
-    location: 'Lahore/Pakistan',
-    img: 'review-1.png',
-    review: 'I’ve worked with several developers before, but Shah_Jalal stands out for their ability to solve complex problems quickly and efficiently. The custom web application they developed for us is a game-changer for our business.'
-  },
-  {
-    name: 'Abdullah',
-    location: 'Dubai/Saudi Arabia',
-    img: 'review-2.png',
-    review: 'From the initial concept to the final launch, Shah_Jalal was with us every step of the way. Their expertise in both front-end and back-end technologies ensured that our new website was not only visually stunning but also highly functional.'
-  },
-  {
-    name: 'Saikat Islam',
-    location: 'Cumilla/Bangladesh',
-    img: 'review (3).png',
-    review: 'Working with Shah Jalal was an absolute pleasure. They took our vision and turned it into a fully functional, beautiful website that exceeded our expectations. Their expertise in both front-end and back-end development was evident throughout the project. Highly recommended for any web development needs!'
-  },
-  {
-    name: 'Rajib Islam',
-    location: 'Dubai/Arabic',
-    img: 'reviews.jpeg',
-    review: 'The website that Siam built for us is nothing short of amazing. The attention to detail and the seamless user experience have taken our online presence to the next level. Their technical skills and creativity made this project a success.'
-  },
-  {
-    name: 'Rakib',
-    location: 'Uhang/China',
-    img: 'review (2).png',
-    review: 'We needed a robust e-commerce platform, and Shah Jalal delivered beyond our expectations. The site is fast, secure, and visually appealing. They were professional, communicative, and really understood our business needs.'
+import React, { useRef, useState } from "react";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import ReviewText from "@/pages/utils";
+
+// Function to fetch reviews
+const fetchReviews = async () => {
+  const response = await fetch("https://code-shine-technology.vercel.app/reviews");
+  if (!response.ok) {
+    throw new Error("Failed to fetch reviews");
   }
-];
+  return response.json();
+};
+
+// Function to validate customerId
+const validateCustomerId = async (customerId) => {
+  const response = await fetch(`https://code-shine-technology.vercel.app/customers/${customerId}`);
+  const data = await response.json();
+  if (!data) {
+    throw new Error("Invalid Customer ID");
+  }
+  return data;
+};
+
+// Function to post a review
+const postReview = async (reviewData) => {
+  const response = await fetch("https://code-shine-technology.vercel.app/reviews", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(reviewData),
+  });
+
+  if (!response.ok) {
+    const errorData = await response.json();
+    throw new Error(errorData.message || "Failed to post review");
+  }
+  return response.json();
+};
 
 const Review = () => {
+  const queryClient = useQueryClient();
+  const [customerId, setCustomerId] = useState("");
+  const [reviewText, setReviewText] = useState("");
+  const [seccess, setSuccess] = useState("");
+
+  // Fetch reviews with React Query v5
+  const {
+    data: reviews,
+    isLoading,
+    error,
+  } = useQuery({
+    queryKey: ["reviews"],
+    queryFn: fetchReviews,
+  });
+
+  // Mutation for posting a review
+  const { mutate } = useMutation({
+    mutationFn: postReview,
+    onSuccess: () => {
+      // Invalidate and refetch reviews after a successful mutation
+      setSuccess("Your Review Added Successfully")
+      queryClient.invalidateQueries({ queryKey: ["reviews"] });
+    },
+    onError: (error) => {
+      setSuccess("")
+      alert(`Error submitting review: ${error.message}`);
+    },
+  });
+
+  // Form submission handler
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      // Validate the customer ID before posting
+      const customerData = await validateCustomerId(customerId);
+
+      // If valid, submit the review
+      mutate({ customerId, review: reviewText, customerData });
+      setCustomerId("");
+      setReviewText("");
+    } catch (error) {
+      alert(`Error: ${error.message}`);
+    }
+  };
+
+  // Ref to access the carousel
+  const carouselRef = useRef(null);
+
+  // Function to scroll the carousel to the left
+  const scrollLeft = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: -300, // Adjust scroll distance as needed
+        behavior: "smooth",
+      });
+    }
+  };
+
+  // Function to scroll the carousel to the right
+  const scrollRight = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: 300, // Adjust scroll distance as needed
+        behavior: "smooth",
+      });
+    }
+  };
+
+  if (isLoading) return <p>Loading reviews...</p>;
+  if (error) return <p>Error fetching reviews: {error.message}</p>;
+
   return (
-    <>
-      <Head>
-        <title>Client Reviews | Code Shine Technology</title>
-        <meta name="description" content="Read what our clients have to say about our services. Our reviews highlight the satisfaction and success stories from our valued customers." />
-        <meta name="keywords" content="client reviews, customer feedback, testimonials, web development reviews, design reviews" />
-        <meta property="og:title" content="Client Reviews | Code Shine Technology" />
-        <meta property="og:description" content="Read what our clients have to say about our services. Our reviews highlight the satisfaction and success stories from our valued customers." />
-        <meta property="og:image" content="URL_to_image_for_social_media_preview" />
-        <meta property="og:url" content="https://codeShineTechnology.com/components/review" />
-        <meta property="og:type" content="website" />
-      </Head>
-      <section className="max-w-[1500px] mx-auto mt-20 shadow-lg hover:shadow-2xl shadow-blue-400 hover:shadow-blue-800 md:p-10">
-        <h1 className="text-center my-5 font-serif uppercase font-bold md:text-6xl text-3xl">What Our Clients Say</h1>
-        <div className="carousel carousel-center bg-green-400 rounded-box w-full space-x-4 p-4">
-          {reviews.map((review, index) => (
-            <div key={index} className="carousel-item w-5/6 md:w-auto">
-              <div className="max-w-sm mx-auto p-6 bg-white shadow-xl shadow-green-400 rounded-lg hover:shadow-2xl hover:shadow-green-800 transition-shadow duration-300 ease-in-out">
-                <div className="flex items-center">
-                  <img
-                    className="w-16 h-16 rounded-full border-2 border-blue-500 shadow-md"
-                    src={review.img}
-                    alt={`Profile picture of ${review.name}`}
-                  />
-                  <div className="ml-4">
-                    <h2 className="text-lg font-semibold text-gray-800">{review.name}</h2>
-                    <p className="text-sm text-gray-500">{review.location}</p>
+    <div className="py-8 px-4 max-w-xl mx-auto">
+      <h2 className="text-4xl font-bold mb-6 text-center">
+        What our client say
+      </h2>
+
+      <div className="relative w-full">
+        {/* Carousel container with buttons */}
+
+        <div
+          ref={carouselRef}
+          className="carousel carousel-center bg-slate-900 rounded-box w-full space-x-4 p-4 mb-5 overflow-x-auto scrollbar-hide flex items-center"
+        >
+          {reviews
+            ?.slice()
+            .reverse()
+            .map((review, index) => (
+              <div key={index} className="carousel-item w-full h-auto">
+                <div className="max-w-sm mx-auto p-6 bg-slate-950 shadow shadow-blue-500 rounded-lg hover:shadow-2xl hover:shadow-blue-600 transition-shadow duration-300 ease-in-out">
+                  <div className="flex items-center">
+                    <img
+                      className="w-16 h-16 rounded-full border-2 border-blue-500 shadow-md"
+                      src={review.customerImage}
+                      alt={`Profile picture of ${review.customerName}`}
+                    />
+                    <div className="ml-4">
+                      <h2 className="text-lg font-semibold ">
+                        {review.customerName}
+                      </h2>
+                      <p className="text-sm ">{review.customerEmail}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="mt-4">
-                  <p className="text-gray-600">{review.review}</p>
+                  <ReviewText review={review.review} wordLimit={40} />
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
-      </section>
-    </>
+
+        {/* Left Arrow Button */}
+        <button
+          onClick={scrollLeft}
+          className="absolute left-0 top-1/2 ml-2 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-2 hover:bg-blue-600 transition"
+        >
+          <FaArrowLeft></FaArrowLeft>
+        </button>
+
+        {/* Right Arrow Button */}
+        <button
+          onClick={scrollRight}
+          className="absolute right-0 top-1/2 mr-2 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-2 hover:bg-blue-600 transition"
+        >
+          <FaArrowRight />
+        </button>
+      </div>
+      {/* Review Form */}
+
+      <form
+        onSubmit={handleSubmit}
+        className="mb-8 bg-slate-900 p-6 rounded text-green-500"
+      >
+        <h2 className="text-2xl font-bold mb-6 text-center">
+          Share Your Experience with Us
+        </h2>
+
+        <div className="mb-4">
+          <label htmlFor="customerId" className="block font-semibold mb-2">
+            Customer ID
+          </label>
+          <input
+            type="text"
+            id="customerId"
+            value={customerId}
+            placeholder="Enter your customerId"
+            onChange={(e) => setCustomerId(e.target.value)}
+            className="w-full p-2 border border-gray-300 rounded-md"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="review" className="block font-semibold mb-2">
+            Review
+          </label>
+          <textarea
+            id="review"
+            value={reviewText}
+            placeholder="Enter your valuable opinion"
+            onChange={(e) => setReviewText(e.target.value)}
+            className="w-full p-2 border border-gray-300 rounded-md"
+            required
+          />
+        </div>
+        <p className="text-green-500">{seccess}</p>
+        <button
+          type="submit"
+          className="bg-blue-500 w-full text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
+        >
+          Submit Review
+        </button>
+      </form>
+    </div>
   );
 };
 

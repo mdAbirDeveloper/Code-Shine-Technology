@@ -48,6 +48,21 @@ const DashboardLayout = ({ children }) => {
                 Messages
               </Link>
             </li>
+            <li className="text-white text-lg mr-2 uppercase font-serif bg-green-500 text-center mb-2 p-3">
+              <Link href={"/components/dashboard/dComponents/addProject"}>
+                Add Project
+              </Link>
+            </li>
+            <li className="text-white text-lg mr-2 uppercase font-serif bg-green-500 text-center mb-2 p-3">
+              <Link href={"/components/dashboard/dComponents/addCustomer"}>
+                AddCustomer
+              </Link>
+            </li>
+            <li className="text-white text-lg mr-2 uppercase font-serif bg-green-500 text-center mb-2 p-3">
+              <Link href={"/components/dashboard/dComponents/reviews"}>
+                All Reviews
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="w-full md:hidden block">
@@ -66,6 +81,30 @@ const DashboardLayout = ({ children }) => {
                   className="text-white text-lg mr-2 uppercase font-serif bg-green-500 text-center mb-2 p-3"
                 >
                   Messages
+                </li>
+              </Link>
+              <Link href={"/components/dashboard/dComponents/addProject"}>
+                <li
+                  onClick={offMenu}
+                  className="text-white text-lg mr-2 uppercase font-serif bg-green-500 text-center mb-2 p-3"
+                >
+                  Add Project
+                </li>
+              </Link>
+              <Link href={"/components/dashboard/dComponents/addCustomer"}>
+                <li
+                  onClick={offMenu}
+                  className="text-white text-lg mr-2 uppercase font-serif bg-green-500 text-center mb-2 p-3"
+                >
+                  Add Customer
+                </li>
+              </Link>
+              <Link href={"/components/dashboard/dComponents/reviews"}>
+                <li
+                  onClick={offMenu}
+                  className="text-white text-lg mr-2 uppercase font-serif bg-green-500 text-center mb-2 p-3"
+                >
+                  All Reviews
                 </li>
               </Link>
               
