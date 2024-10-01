@@ -28,13 +28,16 @@ const Contact = () => {
       };
       console.log(message);
       // Send data to MongoDB (modify endpoint and format if needed)
-      const response = await fetch("https://code-shine-technology.vercel.app/message", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(message),
-      });
+      const response = await fetch(
+        "https://code-shine-technology.vercel.app/message",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(message),
+        }
+      );
 
       const result = await response.json();
       setSubmited("Your message has been sent successfully.");
@@ -51,22 +54,47 @@ const Contact = () => {
     <>
       <Head>
         <title>Contact Us | Code Shine Technology</title>
-        <meta name="description" content="Contact us for more information, inquiries, or support. Fill out the form and we'll get back to you as soon as possible." />
-        <meta name="keywords" content="contact us, get in touch, customer support, inquiry, message us" />
-        <meta property="og:title" content="Contact Us | Code Shine Technology" />
-        <meta property="og:description" content="Contact us for more information, inquiries, or support. Fill out the form and we'll get back to you as soon as possible." />
-        <meta property="og:image" content="URL_to_image_for_social_media_preview" />
-        <meta property="og:url" content="https://codeShineTechnology.com/components/contact" />
-        <meta property="og:type" content="website" />
+        <meta
+          name="description"
+          content="Get in touch with Code Shine Technology. We're here to answer your questions, discuss your projects, and provide the support you need for web development, design, and more."
+        />
+        <meta
+          name="keywords"
+          content="contact Code Shine Technology, web development inquiries, support, consultation, business inquiries"
+        />
+        <meta
+          property="og:title"
+          content="Contact Us | Code Shine Technology"
+        />
+        <meta
+          property="og:description"
+          content="Reach out to Code Shine Technology for all your web development needs. Contact us today to discuss your project and how we can help you succeed."
+        />
+        <meta
+          property="og:image"
+          content="https://codeshinetechnology.com/codeshinetechnology.png"
+        />
+        <meta
+          property="og:url"
+          content="https://codeshinetechnology.com/components/contact"
+        />
+        <meta property="og:site_name" content="Code Shine Technology" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="author" content="Code Shine Technology" />
       </Head>
-      <section className="max-w-[800px] mx-auto min-h-screen mt-20 px-2">
+
+      <section className="max-w-[800px] mx-auto  mt-20 px-2">
         <header className="text-center">
           <h1 className="my-5 md:text-5xl text-3xl font-bold font-serif uppercase text-green-500 ">
             Get in Touch with Us
           </h1>
           <div className="divider md:w-1/3 w-full mx-auto">X</div>
           <p className="text-left">
-            We are here to help! Whether you have a question about our services, need assistance with a project, or just want to learn more about how we can work together, feel free to reach out. Fill out the form below, and we will get back to you as soon as possible. Your success is our priority, and we look forward to hearing from you!
+            We are here to help! Whether you have a question about our services,
+            need assistance with a project, or just want to learn more about how
+            we can work together, feel free to reach out. Fill out the form
+            below, and we will get back to you as soon as possible. Your success
+            is our priority, and we look forward to hearing from you!
           </p>
           <div className="divider my-6"></div>
         </header>
@@ -84,7 +112,9 @@ const Contact = () => {
                 required
                 {...register("name", { required: "Name is required" })}
               />
-              {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
+              {errors.name && (
+                <p className="text-red-500 text-sm">{errors.name.message}</p>
+              )}
             </div>
             <div>
               <label htmlFor="email" className="font-serif font-thin">
@@ -98,7 +128,9 @@ const Contact = () => {
                 required
                 {...register("email", { required: "Email is required" })}
               />
-              {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+              {errors.email && (
+                <p className="text-red-500 text-sm">{errors.email.message}</p>
+              )}
             </div>
             <div>
               <label htmlFor="subject" className="font-serif font-thin">
@@ -123,8 +155,12 @@ const Contact = () => {
               className="text-green-500 input-bordered border rounded-none w-full mt-2 p-2"
               {...register("message", { required: "Message is required" })}
             />
-            {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
-            <p className="text-xl font-thin font-serif text-green-500">{submited}</p>
+            {errors.message && (
+              <p className="text-red-500 text-sm">{errors.message.message}</p>
+            )}
+            <p className="text-xl font-thin font-serif text-green-500">
+              {submited}
+            </p>
             <p className="text-xl font-thin font-serif text-red-500">{error}</p>
             <button
               type="submit"

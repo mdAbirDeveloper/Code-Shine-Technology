@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://codeshinetechnology.com
+
+# Sitemaps
+Sitemap: https://codeshinetechnology.com/sitemap.xml

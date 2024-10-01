@@ -1,9 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
-import { Menu, Close, ArrowRight } from "@mui/icons-material";
+import { Menu, Close } from "@mui/icons-material";
 import { Button } from "@mui/material";
-import Image from "next/image";
 import Link from "next/link";
-import { useNavigate } from "react-router-dom";
 import { useRouter } from "next/router";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -40,12 +39,10 @@ const Navbar = () => {
       >
         <div className="flex justify-between items-center pt-5">
           <div>
-            <Image
+            <img
               alt=""
-              width={150}
-              height={80}
-              src={"/logo.png"}
-              className="ml-4 rounded-2xl -mt-2"
+              src={"/logo.jpg"}
+              className="ml-4 rounded-2xl -mt-2 w-10 h-10"
               title="This is AV Technology logo"
             />
           </div>
@@ -84,6 +81,15 @@ const Navbar = () => {
                 className="mr-2 px-7 animate-fade-in-left-4" // Apply the animation class here
               >
                 About
+              </Button>
+            </Link>
+            <Link href={"/components/blog"}>
+              <Button
+                variant="contained"
+                color="primary"
+                className="mr-2 px-7 animate-fade-in-left-4" // Apply the animation class here
+              >
+                Blogs
               </Button>
             </Link>
             <Link href={"/components/contact"}>

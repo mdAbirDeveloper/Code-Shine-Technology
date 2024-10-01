@@ -43,6 +43,7 @@ module.exports = {
             opacity: "1",
           },
         },
+        
       },
       animation: {
         "slide-in-left-rotate": "slide-in-left-rotate 1.2s ease-out",

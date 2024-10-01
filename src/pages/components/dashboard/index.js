@@ -14,7 +14,7 @@ const Dashboard = () => {
 
   if (!user || user?.email !== "MDSAHJALAL9778@GMAIL.COM") {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-100 text-center p-4">
+      <div className=" flex items-center justify-center bg-gray-100 text-center p-4">
         <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
           <h1 className="text-2xl font-bold mb-4 text-red-500">
             Access Denied
@@ -29,7 +29,7 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900 shadow mt-6 rounded-xl p-6">
+    <div className=" bg-slate-900 shadow mt-6 rounded-xl p-6">
       <h1 className="text-3xl font-bold mb-6 text-center text-blue-600">
         Dashboard
       </h1>

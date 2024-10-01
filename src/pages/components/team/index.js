@@ -43,22 +43,40 @@ const TeamMember = ({ name, title, bio, img }) => {
 const Team = () => {
   const teamMembers = [
     {
-      img: 'profile-pic.png',
+      img: "profile-pic.jpg",
       name: "Shah Jalal",
       title: "Full-Stack Web Developer",
-      bio: `As a full-stack web developer, Shah Jalal is a versatile and highly skilled professional with a comprehensive understanding of both front-end and back-end technologies. With expertise in JavaScript frameworks (React, Angular, Vue.js), HTML, CSS, Node.js, Python, Java, and PHP, Shah Jalal excels in building dynamic, responsive, and user-friendly web applications. Their proficiency in working with databases (SQL and NoSQL) ensures efficient data storage and retrieval. Shah Jalal is dedicated to optimizing performance, implementing best practices for security and reliability, and ensuring seamless integration between client-side and server-side components. They collaborate closely with designers, front-end developers, back-end developers, and other team members to deliver comprehensive web solutions that meet user and stakeholder needs.`
+      bio: `Shah Jalal, CEO of Code Shine Technology, leads the agency with expertise in full-stack web development. Proficient in React.js, Next.js, Redux, Tailwind CSS, Node.js, Express.js, MongoDB, and Firebase, he builds responsive, secure, and scalable web applications. Shah Jalal also excels in managing deployments with Vercel, Netlify, and GitHub, ensuring seamless hosting setups and efficient workflows. His leadership drives the delivery of innovative web solutions tailored to client needs.`,
     },
     {
-      img: 'member-1.png',
+      img: "member-1.png",
       name: "Siam",
       title: "Front-End Web Developer",
-      bio: `As a front-end web developer, Siam is a creative and detail-oriented professional with a passion for crafting visually stunning and user-friendly websites. With expertise in HTML, CSS, and JavaScript, Siam brings a keen eye for design and a commitment to delivering high-quality, responsive web experiences. Their dedication to staying current with the latest trends and technologies in front-end development ensures that every project is functional and aesthetically pleasing. Collaborating with the rest of the team, Siam plays a crucial role in bringing web projects to life.`
+      bio: `As a front-end web developer, Siam is a creative and detail-oriented professional with a passion for crafting visually stunning and user-friendly websites. With expertise in HTML, CSS, and JavaScript, Siam brings a keen eye for design and a commitment to delivering high-quality, responsive web experiences. Their dedication to staying current with the latest trends and technologies in front-end development ensures that every project is functional and aesthetically pleasing. Collaborating with the rest of the team, Siam plays a crucial role in bringing web projects to life.`,
     },
     {
-      img: 'review-1.png',
+      img: "logo.png",
       name: "Mohammad Ali",
       title: "Back-End Web Developer",
-      bio: `As a back-end web developer, Mohammad Ali is a highly skilled and analytical professional with a deep understanding of server-side technologies and database management. With expertise in Node.js, Python, Java, and PHP, Mohammad Ali excels in building robust, scalable, and secure server-side applications. Their proficiency with databases (SQL and NoSQL) ensures efficient data storage and retrieval. Mohammad Ali is dedicated to optimizing performance and implementing best practices for security and reliability. By collaborating with front-end developers and other team members, Mohammad Ali plays a pivotal role in delivering seamless and efficient web solutions that meet user and stakeholder needs.`
+      bio: `As a back-end web developer, Mohammad Ali is a highly skilled and analytical professional with a deep understanding of server-side technologies and database management. With expertise in Node.js, Python, Java, and PHP, Mohammad Ali excels in building robust, scalable, and secure server-side applications. Their proficiency with databases (SQL and NoSQL) ensures efficient data storage and retrieval. Mohammad Ali is dedicated to optimizing performance and implementing best practices for security and reliability. By collaborating with front-end developers and other team members, Mohammad Ali plays a pivotal role in delivering seamless and efficient web solutions that meet user and stakeholder needs.`,
+    },
+    {
+      img: "taspia.png",
+      name: "Taspia",
+      title: "Front-End Developer",
+      bio: `Taspia is a talented front-end developer at Code Shine Technology, specializing in building intuitive and visually engaging user interfaces. With expertise in React.js, Next.js, Redux, and Tailwind CSS, Taspia creates responsive and dynamic web applications that deliver seamless user experiences. Her keen eye for design and attention to detail ensure that every project aligns with modern web standards and client expectations. Taspia is dedicated to optimizing performance, implementing best practices, and collaborating closely with designers and developers to bring ideas to life.`,
+    },
+    {
+      img: "habiba.jpg",
+      name: "Umme Habiba",
+      title: "Front-End Developer",
+      bio: `Umme Habiba is a skilled front-end developer at Code Shine Technology, focused on creating visually appealing and responsive web interfaces. With expertise in React.js, Next.js, Redux, and Tailwind CSS, she delivers smooth, intuitive user experiences across devices. Umme’s attention to detail and commitment to performance optimization ensure that each project not only looks great but functions flawlessly. She collaborates effectively with both designers and back-end developers to produce high-quality, user-centric web applications.`,
+    },
+    {
+      img: "bahar.png",
+      name: "Bahar",
+      title: "Graphics Designer & Video Editor",
+      bio: `Bahar is a creative graphics designer and video editor at Code Shine Technology, known for crafting visually stunning designs and engaging multimedia content. With expertise in branding, digital illustrations, and motion graphics, Bahar brings concepts to life through compelling visuals and storytelling. She excels at creating cohesive designs that align with project goals, enhancing both web and video projects. Bahar's skillful use of design tools and video editing software ensures that each project is polished, professional, and visually impactful.`,
     },
   ];
 
@@ -66,13 +84,33 @@ const Team = () => {
     <>
       <Head>
         <title>Meet Our Team | Code Shine Technology</title>
-        <meta name="description" content="Meet the experienced team behind Code Shine Technology. Learn about our full-stack, front-end, and back-end web developers and their roles in delivering exceptional web solutions." />
-        <meta name="keywords" content="web development team, full-stack developer, front-end developer, back-end developer, Code Shine Technology" />
-        <meta property="og:title" content="Meet Our Team | Code Shine Technology" />
-        <meta property="og:description" content="Meet the experienced team behind Code Shine Technology. Discover the roles and expertise of our full-stack, front-end, and back-end developers." />
-        <meta property="og:image" content="URL_TO_AN_IMAGE" />
-        <meta property="og:url" content="https://codeShineTechnology.com/components/team" />
+        <meta
+          name="description"
+          content="Meet the talented team behind Code Shine Technology. Learn about our experts in web development, design, and digital solutions who are dedicated to delivering exceptional results."
+        />
+        <meta
+          name="keywords"
+          content="team, web development team, design experts, Code Shine Technology, meet our team, digital solutions"
+        />
+        <meta
+          property="og:title"
+          content="Meet Our Team | Code Shine Technology"
+        />
+        <meta
+          property="og:description"
+          content="Get to know the team at Code Shine Technology. Discover the professionals behind our web development and design services, and see how their expertise drives our success."
+        />
+        <meta
+          property="og:image"
+          content="https://codeshinetechnology.com/codeshinetechnology.png"
+        />
+        <meta
+          property="og:url"
+          content="https://codeshinetechnology.com/components/team"
+        />
+        <meta property="og:site_name" content="Code Shine Technology" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="author" content="Code Shine Technology" />
       </Head>
 
       <div className="">

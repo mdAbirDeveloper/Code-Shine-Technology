@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 import { FaEye, FaSlackHash } from "react-icons/fa";
+import Head from "next/head";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -39,11 +40,11 @@ const Login = () => {
         const userData = await response.json();
         localStorage.setItem("user", JSON.stringify(userData));
         setSuccess("Login successful!");
-
         // Optionally redirect to a dashboard or another page
         router.reload();
       } else {
-        setError("Invalid credentials. Please try again.");
+        const errorData = await response.json();
+        setError(errorData.message || "Invalid credentials. Please try again.");
       }
     } catch (error) {
       setError("An error occurred. Please try again later.");
@@ -66,8 +67,36 @@ const Login = () => {
 
   return (
     <div>
-      <div className="flex justify-center items-center min-h-screen bg-slate-800">
-        <div className="bg-slate-900 p-8 rounded shadow-md w-full max-w-md hover:shadow-blue-500 hover:shadow-2xl">
+      <Head>
+        <title>Login | Code Shine Technology</title>
+        <meta
+          name="description"
+          content="Log in to your Code Shine Technology account to access your dashboard, manage your projects, and utilize our web development and design services."
+        />
+        <meta
+          name="keywords"
+          content="login, Code Shine Technology, account access, web development dashboard"
+        />
+        <meta property="og:title" content="Login | Code Shine Technology" />
+        <meta
+          property="og:description"
+          content="Access your Code Shine Technology account to manage your projects and take advantage of our web development services. Secure login for your convenience."
+        />
+        <meta
+          property="og:image"
+          content="https://codeshinetechnology.com/codeshinetechnology.png"
+        />
+        <meta
+          property="og:url"
+          content="https://codeshinetechnology.com/components/login"
+        />
+        <meta property="og:site_name" content="Code Shine Technology" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="author" content="Code Shine Technology" />
+      </Head>
+
+      <div className="flex justify-center items-center bg-slate-800">
+        <div className="bg-slate-900 p-8 rounded shadow-md w-full  mt-10 max-w-md hover:shadow-blue-500 hover:shadow-2xl">
           <h2 className="text-2xl font-bold mb-6 text-center">Admin Login</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-4">
@@ -124,7 +153,7 @@ const Login = () => {
                 disabled
                 className="w-full bg-blue-200 text-white p-2 rounded"
               >
-                Already Login
+                Already Logged In
               </button>
             ) : (
               <button

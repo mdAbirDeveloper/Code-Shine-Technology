@@ -50,19 +50,29 @@ const Footer = () => {
               Social
             </h6>
             <div className="grid grid-flow-col gap-4 mt-2">
-              <a
-                href="https://wa.me/8801832822560"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-3xl"
-              >
-                <FaWhatsapp />
-              </a>
+              
               <a href="https://github.com/mdAbirDeveloper">
                 <FaGithub className="text-3xl" />
               </a>
               <a href="https://x.com/SahjalalWeb">
                 <FaTwitter className="text-3xl" />
+              </a>
+            </div>
+          </nav>
+          <nav>
+            <h6 className="font-bold font-serif text-3xl uppercase text-white">
+              Contact
+            </h6>
+            <div className="mt-2">
+              <p>info@codeshinetechnology.com</p>
+              <a
+                href="https://wa.me/8801832822560"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-3xl flex mt-2"
+              >
+                <FaWhatsapp className="mt-2 mr-1" />
+              <p>+880 1832 822560</p>
               </a>
             </div>
           </nav>

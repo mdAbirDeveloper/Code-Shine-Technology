@@ -16,7 +16,7 @@ const DashboardLayout = ({ children }) => {
 
   if (!user || user?.email !== "MDSAHJALAL9778@GMAIL.COM") {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-100 text-center p-4">
+      <div className=" flex items-center justify-center bg-gray-100 text-center p-4">
         <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
           <h1 className="text-2xl font-bold mb-4 text-red-500">
             Access Denied
@@ -39,9 +39,9 @@ const DashboardLayout = ({ children }) => {
   };
 
   return (
-    <div className="max-w-[1200px] mx-auto min-h-screen">
+    <div className="max-w-[1200px] mx-auto  text-green-500">
       <div className="md:flex block">
-        <div className="w-52 shadow-md p-2 min-h-screen hidden md:block">
+        <div className="w-52 shadow-md p-2  hidden md:block">
           <ul>
             <li className="text-white text-lg mr-2 uppercase font-serif bg-green-500 text-center mb-2 p-3">
               <Link href={"/components/dashboard/dComponents/messages"}>
@@ -61,6 +61,16 @@ const DashboardLayout = ({ children }) => {
             <li className="text-white text-lg mr-2 uppercase font-serif bg-green-500 text-center mb-2 p-3">
               <Link href={"/components/dashboard/dComponents/reviews"}>
                 All Reviews
+              </Link>
+            </li>
+            <li className="text-white text-lg mr-2 uppercase font-serif bg-green-500 text-center mb-2 p-3">
+              <Link href={"/components/dashboard/dComponents/deleteBlog"}>
+                Delete Blog
+              </Link>
+            </li>
+            <li className="text-white text-lg mr-2 uppercase font-serif bg-green-500 text-center mb-2 p-3">
+              <Link href={"/components/dashboard/dComponents/writeBlog"}>
+                Write Blog
               </Link>
             </li>
           </ul>
@@ -107,7 +117,14 @@ const DashboardLayout = ({ children }) => {
                   All Reviews
                 </li>
               </Link>
-              
+              <Link href={"/components/dashboard/dComponents/writeBlog"}>
+                <li
+                  onClick={offMenu}
+                  className="text-white text-lg mr-2 uppercase font-serif bg-green-500 text-center mb-2 p-3"
+                >
+                  Write Blog
+                </li>
+              </Link>
             </ul>
           )}
         </div>

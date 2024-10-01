@@ -39,7 +39,7 @@ const AddProject = () => {
     setLoading(true);
     setError("");
 
-    const { heading, image } = data;
+    const { image } = data;
     const imageFile = image[0];
     const formData = new FormData();
     formData.append("image", imageFile);
@@ -85,6 +85,7 @@ const AddProject = () => {
       // alert("result uploaded successfully!");
       queryClient.invalidateQueries({ queryKey: ["project"] });
     } catch (err) {
+      setLoading(false)
       setError(err.message);
       console.error("Error uploading result:", err);
     } finally {
@@ -115,7 +116,7 @@ const AddProject = () => {
 
   if (!user || user?.email !== "MDSAHJALAL9778@GMAIL.COM") {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-100 text-center p-4">
+      <div className=" flex items-center justify-center bg-gray-100 text-center p-4">
         <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
           <h1 className="text-2xl font-bold mb-4 text-red-500">
             Access Denied
@@ -187,7 +188,7 @@ const AddProject = () => {
               type="submit"
               className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition"
             >
-              {isLoading ? "Project Addeding...." : "Add Project"}
+              {loading ? "Project Addeding...." : "Add Project"}
             </button>
           </form>
         </div>
