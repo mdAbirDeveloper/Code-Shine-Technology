@@ -42,7 +42,7 @@ const Navbar = () => {
             <img
               alt=""
               src={"/logo.jpg"}
-              className="ml-4 rounded-2xl -mt-2 w-10 h-10"
+              className="ml-4 rounded-2xl -mt-2 w-16 h-16"
               title="This is AV Technology logo"
             />
           </div>
