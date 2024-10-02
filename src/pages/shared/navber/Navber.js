@@ -219,7 +219,7 @@ const Navbar = () => {
                   <Button
                     variant="contained"
                     color="primary"
-                    className="w-full"
+                    className="w-full mt-2"
                   >
                     Login
                   </Button>

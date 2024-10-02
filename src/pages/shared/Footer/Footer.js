@@ -11,7 +11,7 @@ const Footer = () => {
             <h6 className="font-bold font-serif text-3xl uppercase text-white">
               Services
             </h6>
-            <a className="text-lg font-serif">Wen Design</a>
+            <a className="text-lg font-serif">Web Design</a>
             <a className="text-lg font-serif">Web Development</a>
             <a className="text-lg font-serif">Front_end</a>
             <a className="text-lg font-serif">Back_end</a>
