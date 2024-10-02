@@ -32,11 +32,11 @@ const Pricing = () => {
         <meta name="author" content="Code Shine Technology" />
       </Head>
 
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-[1500px] mx-auto px-4">
         <h1 className="text-center text-5xl font-serif font-bold uppercase text-white my-10">
           Our Pricing Plans
         </h1>
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-10">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
           {/* Basic Plan */}
           <div className="shadow-lg shadow-blue-500 hover:shadow-blue-600 hover:shadow-2xl px-6 py-12 text-center transition-transform transform hover:-translate-y-2 flex flex-col justify-between h-full">
             <div>

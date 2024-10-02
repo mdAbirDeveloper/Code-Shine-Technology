@@ -43,19 +43,17 @@ const Services = () => {
         <meta name="author" content="Code Shine Technology" />
       </Head>
 
-      <div className="max-w-[1500px] mx-auto">
-        <h1 className="text-center text-5xl font-serif font-bold uppercase text-white my-10">
-          our services
+      <div className="max-w-[1500px] mx-auto px-4">
+        <h1 className="text-center text-4xl md:text-5xl font-serif font-bold uppercase text-white my-10">
+          Our Services
         </h1>
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-10">
-          <div className="shadow-lg shadow-blue-500 hover:shadow-blue-600 hover:shadow-2xl px-4 py-10 text-center  transition-transform transform hover:-translate-y-2">
-            <h2 className="text-3xl font-serif font-bold uppercase text-blue-400">
-              Front end<br></br>
-              <span className="text-3xl font-serif font-bold uppercase text-lime-400">
-                web development
-              </span>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+          <div className="shadow-lg shadow-blue-500 hover:shadow-blue-600 hover:shadow-2xl px-4 py-6 md:py-10 text-center transition-transform transform hover:-translate-y-2">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold uppercase text-blue-400">
+              Front End<br />
+              <span className="text-lime-400">Web Development</span>
             </h2>
-            <div className="flex justify-around my-3 mb-6">
+            <div className="flex justify-around my-4 mb-6">
               <FaHtml5 className="text-3xl text-red-500" />
               <FaCss3 className="text-3xl text-blue-500" />
               <FaReact className="text-3xl text-blue-400" />
@@ -63,29 +61,26 @@ const Services = () => {
               <FaBootstrap className="text-3xl text-purple-500" />
               <SiTailwindcss className="text-3xl text-teal-500" />
             </div>
-            <p className="text-xl font-serif font-thin text-left mt-5 text-white">
+            <p className="text-lg md:text-xl font-serif font-thin text-left text-white">
               We craft visually stunning, responsive, and interactive interfaces
-              using HTML, CSS, JavaScript, React.js, Next.js, Bootstrap, Tailwind CSS, and
-              various CSS libraries. Our focus is on delivering seamless user
-              experiences with top-notch design and functionality.
+              using HTML, CSS, JavaScript, React.js, Next.js, Bootstrap, and Tailwind CSS.
+              Our focus is on delivering seamless user experiences with top-notch design and functionality.
             </p>
           </div>
 
-          <div className="shadow-lg shadow-blue-500 hover:shadow-blue-600 hover:shadow-2xl px-4 py-10 text-center transition-transform transform hover:-translate-y-2">
-            <h2 className="text-3xl font-serif font-bold uppercase text-blue-400">
-              Back end<br></br>
-              <span className="text-3xl font-serif font-bold uppercase text-lime-400">
-                web development
-              </span>
+          <div className="shadow-lg shadow-blue-500 hover:shadow-blue-600 hover:shadow-2xl px-4 py-6 md:py-10 text-center transition-transform transform hover:-translate-y-2">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold uppercase text-blue-400">
+              Back End<br />
+              <span className="text-lime-400">Web Development</span>
             </h2>
-            <div className="flex justify-around my-3">
+            <div className="flex justify-around my-4">
               <IoLogoJavascript className="text-3xl text-yellow-400" />
               <FaNodeJs className="text-3xl text-green-400" />
               <SiExpress className="text-3xl text-green-400" />
               <SiMongodb className="text-3xl text-green-400" />
               <SiMysql className="text-3xl text-white" />
             </div>
-            <p className="text-xl font-serif font-thin text-left text-white">
+            <p className="text-lg md:text-xl font-serif font-thin text-left text-white">
               We specialize in robust and scalable back-end solutions using
               Node.js, Express, and various databases like MongoDB and SQL. Our
               services ensure your applications run smoothly, handle data
@@ -93,14 +88,12 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="shadow-lg shadow-blue-500 hover:shadow-blue-600 hover:shadow-2xl px-4 py-10 text-center  transition-transform transform hover:-translate-y-2">
-            <h2 className="text-3xl font-serif font-bold uppercase text-blue-400">
-              Full Stack<br></br>
-              <span className="text-3xl font-serif font-bold uppercase text-lime-400">
-                web development
-              </span>
+          <div className="shadow-lg shadow-blue-500 hover:shadow-blue-600 hover:shadow-2xl px-4 py-6 md:py-10 text-center transition-transform transform hover:-translate-y-2">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold uppercase text-blue-400">
+              Full Stack<br />
+              <span className="text-lime-400">Web Development</span>
             </h2>
-            <div className="flex justify-around my-3">
+            <div className="flex justify-around my-4">
               <FaHtml5 className="text-3xl text-red-500" />
               <FaCss3 className="text-3xl text-blue-500" />
               <FaReact className="text-3xl text-blue-400" />
@@ -112,7 +105,7 @@ const Services = () => {
               <SiMongodb className="text-3xl text-green-400" />
               <SiMysql className="text-3xl text-white" />
             </div>
-            <p className="text-xl font-serif font-thin text-left text-white">
+            <p className="text-lg md:text-xl font-serif font-thin text-left text-white">
               We offer comprehensive full stack development services, combining
               both front-end and back-end expertise. Utilizing technologies like
               React.js, Node.js, Express, and databases such as MongoDB and SQL,

@@ -15,19 +15,19 @@ const TeamMember = ({ name, title, bio, img }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="shadow-lg shadow-blue-400 p-5 hover:shadow-blue-500 hover:shadow-2xl transition-transform transform hover:-translate-y-2">
-      <div className="flex items-center">
+    <div className="shadow-lg shadow-blue-400 p-5 hover:shadow-blue-500 hover:shadow-2xl transition-transform transform hover:-translate-y-2 rounded-lg">
+      <div className="flex">
         <img
-          className="rounded-full w-24 md:ml-14 mr-10 hover:shadow-xl"
+          className="rounded-full left-0 w-24 h-24"
           src={img}
           alt={`${name} - ${title}`}
         />
-        <div>
-          <h2 className="text-2xl font-serif mt-5">{name}</h2>
-          <p className="text-lg">{title}</p>
+        <div className="ml-4">
+          <h2 className="text-xl font-serif mt-5 md:mt-5">{name}</h2>
+          <p className="text-gray-100">{title}</p>
         </div>
       </div>
-      <p>
+      <p className="text-justify mt-4 text-gray-100">
         {isExpanded ? bio : truncateText(bio, 40)}
         <span
           onClick={() => setIsExpanded(!isExpanded)}
@@ -52,31 +52,31 @@ const Team = () => {
       img: "member-1.png",
       name: "Siam",
       title: "Front-End Web Developer",
-      bio: `As a front-end web developer, Siam is a creative and detail-oriented professional with a passion for crafting visually stunning and user-friendly websites. With expertise in HTML, CSS, and JavaScript, Siam brings a keen eye for design and a commitment to delivering high-quality, responsive web experiences. Their dedication to staying current with the latest trends and technologies in front-end development ensures that every project is functional and aesthetically pleasing. Collaborating with the rest of the team, Siam plays a crucial role in bringing web projects to life.`,
+      bio: `As a front-end web developer, Siam is a creative and detail-oriented professional with a passion for crafting visually stunning and user-friendly websites. With expertise in HTML, CSS, and JavaScript, Siam brings a keen eye for design and a commitment to delivering high-quality, responsive web experiences. Their dedication to staying current with the latest trends and technologies in front-end development ensures that every project is functional and aesthetically pleasing.`,
     },
     {
-      img: "logo.png",
+      img: "logo.jpg",
       name: "Mohammad Ali",
       title: "Back-End Web Developer",
-      bio: `As a back-end web developer, Mohammad Ali is a highly skilled and analytical professional with a deep understanding of server-side technologies and database management. With expertise in Node.js, Python, Java, and PHP, Mohammad Ali excels in building robust, scalable, and secure server-side applications. Their proficiency with databases (SQL and NoSQL) ensures efficient data storage and retrieval. Mohammad Ali is dedicated to optimizing performance and implementing best practices for security and reliability. By collaborating with front-end developers and other team members, Mohammad Ali plays a pivotal role in delivering seamless and efficient web solutions that meet user and stakeholder needs.`,
+      bio: `As a back-end web developer, Mohammad Ali is a highly skilled and analytical professional with a deep understanding of server-side technologies and database management. With expertise in Node.js, Python, Java, and PHP, Mohammad Ali excels in building robust, scalable, and secure server-side applications. Their proficiency with databases (SQL and NoSQL) ensures efficient data storage and retrieval.`,
     },
     {
       img: "taspia.png",
       name: "Taspia",
       title: "Front-End Developer",
-      bio: `Taspia is a talented front-end developer at Code Shine Technology, specializing in building intuitive and visually engaging user interfaces. With expertise in React.js, Next.js, Redux, and Tailwind CSS, Taspia creates responsive and dynamic web applications that deliver seamless user experiences. Her keen eye for design and attention to detail ensure that every project aligns with modern web standards and client expectations. Taspia is dedicated to optimizing performance, implementing best practices, and collaborating closely with designers and developers to bring ideas to life.`,
+      bio: `Taspia is a talented front-end developer at Code Shine Technology, specializing in building intuitive and visually engaging user interfaces. With expertise in React.js, Next.js, Redux, and Tailwind CSS, Taspia creates responsive and dynamic web applications that deliver seamless user experiences.`,
     },
     {
       img: "habiba.jpg",
       name: "Umme Habiba",
       title: "Front-End Developer",
-      bio: `Umme Habiba is a skilled front-end developer at Code Shine Technology, focused on creating visually appealing and responsive web interfaces. With expertise in React.js, Next.js, Redux, and Tailwind CSS, she delivers smooth, intuitive user experiences across devices. Umme’s attention to detail and commitment to performance optimization ensure that each project not only looks great but functions flawlessly. She collaborates effectively with both designers and back-end developers to produce high-quality, user-centric web applications.`,
+      bio: `Umme Habiba is a skilled front-end developer at Code Shine Technology, focused on creating visually appealing and responsive web interfaces. With expertise in React.js, Next.js, Redux, and Tailwind CSS, she delivers smooth, intuitive user experiences across devices. Umme’s attention to detail ensures that each project not only looks great but functions flawlessly.`,
     },
     {
       img: "bahar.png",
       name: "Bahar",
       title: "Graphics Designer & Video Editor",
-      bio: `Bahar is a creative graphics designer and video editor at Code Shine Technology, known for crafting visually stunning designs and engaging multimedia content. With expertise in branding, digital illustrations, and motion graphics, Bahar brings concepts to life through compelling visuals and storytelling. She excels at creating cohesive designs that align with project goals, enhancing both web and video projects. Bahar's skillful use of design tools and video editing software ensures that each project is polished, professional, and visually impactful.`,
+      bio: `Bahar is a creative graphics designer and video editor at Code Shine Technology, known for crafting visually stunning designs and engaging multimedia content. With expertise in branding, digital illustrations, and motion graphics, Bahar brings concepts to life through compelling visuals and storytelling.`,
     },
   ];
 
@@ -113,12 +113,12 @@ const Team = () => {
         <meta name="author" content="Code Shine Technology" />
       </Head>
 
-      <div className="">
+      <div className="px-4 md:px-10 lg:px-20">
         <div className="max-w-[1500px] mx-auto shadow-md mt-20 p-5">
           <h1 className="uppercase font-bold font-serif md:text-4xl text-3xl text-blue-500 text-center py-6">
             Our Experienced Team
           </h1>
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-6 justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
             {teamMembers.map((member, index) => (
               <TeamMember
                 key={index}
