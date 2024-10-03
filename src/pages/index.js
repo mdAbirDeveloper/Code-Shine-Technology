@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Project from "./components/project";
 import About from "./components/about";
 import Services from "./components/services";
@@ -8,7 +8,7 @@ import Review from "./components/review";
 import Contact from "./components/contact";
 import Head from "next/head";
 import Pricing from "./components/pricing";
- 
+import FocusPage from "./components/focus";
 
 export default function Home() {
   return (
@@ -32,12 +32,15 @@ export default function Home() {
           property="og:description"
           content="Code Shine Technology offers top-notch web development, design, and video editing services. Discover our expertise in creating stunning and functional digital solutions."
         />
-        <meta property="og:image" content="https://codeShineTechnology.com/codeshinetechnology.png" />
+        <meta
+          property="og:image"
+          content="https://codeShineTechnology.com/codeshinetechnology.png"
+        />
         <meta property="og:url" content="https://codeShineTechnology.com" />
         <meta name="robots" content="index, follow" />
       </Head>
       <div
-        style={{ maxWidth: "1500px", }}
+        style={{ maxWidth: "1500px" }}
         className="mx-auto shadow-xl shadow-blue-500"
       >
         <div
@@ -79,10 +82,11 @@ export default function Home() {
         </div>
       </div>
 
-
       {/* end top section */}
 
       <Services />
+      
+      <FocusPage />
 
       <div style={{ maxWidth: "1500px" }} className="mx-auto shadow-2xl">
         <div className="">
@@ -96,7 +100,6 @@ export default function Home() {
 
       <Review />
 
-      
       <About />
 
       <Contact />
