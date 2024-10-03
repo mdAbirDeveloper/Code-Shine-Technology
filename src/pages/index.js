@@ -85,7 +85,6 @@ export default function Home() {
       {/* end top section */}
 
       <Services />
-      
       <FocusPage />
 
       <div style={{ maxWidth: "1500px" }} className="mx-auto shadow-2xl">

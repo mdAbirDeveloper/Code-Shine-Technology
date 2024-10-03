@@ -4,7 +4,7 @@ import { Menu, Close } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaUser, FaWhatsapp } from "react-icons/fa";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -137,14 +137,7 @@ const Navbar = () => {
 
           {/* Contact button (hidden if screen width < 1419px) */}
           <div className="hidden min-[1419px]:flex">
-            <Button
-              variant="contained"
-              color="success"
-              onClick={handleClick}
-              className="flex items-center text-sm lg:text-base"
-            >
-              Contact Us <FaWhatsapp className="text-xl ml-1" />
-            </Button>
+            <Link href={"/components/profile"} className="rounded-lg bg-blue-500 px-5 py-2 uppercase font-bold">Profile</Link>
           </div>
 
           {/* Dropdown menu (visible if screen width < 1419px) */}
@@ -164,32 +157,56 @@ const Navbar = () => {
           <div className="bg-slate-800 py-4 fixed right-0 w-64 z-50 transition-transform transform translate-x-0 animate-slide-in-left">
             <div className="space-y-3 px-4">
               <Link href={"/"} onClick={toggleMenu}>
-                <Button variant="contained" color="primary" className="w-full mt-2">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className="w-full mt-2"
+                >
                   Home
                 </Button>
               </Link>
               <Link href={"/components/services"} onClick={toggleMenu}>
-                <Button variant="contained" color="primary" className="w-full mt-2">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className="w-full mt-2"
+                >
                   Service
                 </Button>
               </Link>
               <Link href={"/components/project"} onClick={toggleMenu}>
-                <Button variant="contained" color="primary" className="w-full mt-2">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className="w-full mt-2"
+                >
                   Project
                 </Button>
               </Link>
               <Link href={"/components/about"} onClick={toggleMenu}>
-                <Button variant="contained" color="primary" className="w-full mt-2">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className="w-full mt-2"
+                >
                   About
                 </Button>
               </Link>
               <Link href={"/components/blog"} onClick={toggleMenu}>
-                <Button variant="contained" color="primary" className="w-full mt-2">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className="w-full mt-2"
+                >
                   Blog
                 </Button>
               </Link>
               <Link href={"/components/contact"} onClick={toggleMenu}>
-                <Button variant="contained" color="primary" className="w-full mt-2">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className="w-full mt-2"
+                >
                   Contact
                 </Button>
               </Link>
@@ -225,17 +242,17 @@ const Navbar = () => {
                   </Button>
                 </Link>
               )}
+              <Link href={'/components/profile'}>
               <Button
                 variant="contained"
                 color="success"
                 onClick={() => {
                   toggleMenu();
-                  handleClick();
                 }}
-                className="w-full flex justify-center"
+                className="w-full flex justify-center mt-2"
               >
-                Contact Us <FaWhatsapp className="text-xl ml-1" />
-              </Button>
+                Profile <FaUser className="ml-2" />
+              </Button></Link>
             </div>
           </div>
         )}
